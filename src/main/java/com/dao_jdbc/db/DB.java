@@ -11,6 +11,8 @@ import java.util.Properties;
 
 public class DB {
     private static Connection conn = null;
+    private DB(){
+    }
 
     public static Connection getConnection(){ 
         
