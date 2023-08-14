@@ -1,6 +1,7 @@
 package com.dao_jdbc.application;
 
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.dao_jdbc.dao.DaoFactory;
@@ -19,6 +20,17 @@ public class Main {
         
         Department department = new Department(2, null);
         List<Seller> list = sellerDao.findByDepartment(department);
+        list.forEach(System.out::println);
+
+        System.out.println();
+
+        LocalDate date = LocalDate.parse("2004-02-28");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", date , 4000, department);
+        sellerDao.insert(newSeller);
+        System.out.println(newSeller.getId());
+
+        System.out.println();
+        list = sellerDao.findAll();
         list.forEach(System.out::println);
 
     }
