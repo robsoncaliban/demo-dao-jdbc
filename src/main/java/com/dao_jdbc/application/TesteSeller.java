@@ -11,7 +11,7 @@ import com.dao_jdbc.db.DbException;
 import com.dao_jdbc.model.Department;
 import com.dao_jdbc.model.Seller;
 
-public class Main {
+public class TesteSeller {
     public static void main(String[] args) {
        
         SellerDao sellerDao = DaoFactory.creatSellerDao();
